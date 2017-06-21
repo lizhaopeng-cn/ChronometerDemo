@@ -12,9 +12,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Chronometer chronometer;
 
-    private Button button1;
-    private Button button2;
-    private Button button3;
+    private Button btnStart;
+    private Button btnPause;
+    private Button btnReset;
 
     private long pauseTime;
     private boolean tag = true;
@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         chronometer = (Chronometer) findViewById(R.id.chronometer);
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-        button3 = (Button) findViewById(R.id.button3);
+        btnStart = (Button) findViewById(R.id.btn_start);
+        btnPause = (Button) findViewById(R.id.btn_pause);
+        btnReset = (Button) findViewById(R.id.btn_reset);
 
         chronometer.setFormat("已用时：%s");
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(pauseTime == 0){
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        btnPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 chronometer.stop();
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button3.setOnClickListener(new View.OnClickListener() {
+        btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 chronometer.setBase(SystemClock.elapsedRealtime());

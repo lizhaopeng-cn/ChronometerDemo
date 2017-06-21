@@ -15,7 +15,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btn_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onStart"
@@ -23,7 +23,7 @@
         </Button>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_pause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onStop"
@@ -31,7 +31,7 @@
         </Button>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onReset"
